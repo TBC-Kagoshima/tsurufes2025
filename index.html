@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>鶴志燃翔　- 77th鶴文祭</title>
+        <meta name="description" content="第77回鶴丸高校文化祭公式サイトです。" />
+        <meta name="format-detection" content="telephone=no" />
+        <link rel="icon" href="" type="image/svg+xml">
+        <link rel="apple-touch-icon" href="https://drive.google.com/file/d/1gQ3ZGGFl1yQxwy0cy_QmmY_6MgOG1kat/view?usp=drive_link" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap" rel="stylesheet">
+        <script type="importmap">
+            {
+                "imports": {
+                "three": "https://cdn.jsdelivr.net/npm/three@0.175.0/build/three.module.js"
+                 }
+            }
+        </script>
+        <script src="three.js" type="module"></script>
+    </head>
+    <body>
+        <section class="loading">
+
+        </section>
+        <a href="#TOP">
+            <div class="to_TOP"><p>TOP</p></div>
+        </a>
+        <header id="TOP">
+            <div class="header_wrap">
+                <div class="innerWrap">
+                    <div class="headerWrap">
+                        <div class="header_title">
+                            <h1 class="header_h1"><img src="kakusinenshou.png" alt="鶴志燃翔"></h1>
+                            <h3 class="header_h3"><img src="Official-cultural-festival-logo.png" alt="文化祭公式ロゴ"></h3>
+                        </div>
+                        <h2 class="header_h2">—己の鶴が、天舞する—</h2>
+                        <p class="header_p">77th鶴丸高校文化祭</p>
+                        <a href="index2.html"><h4> Details→</h4></a>
+                    </div>
+                    <nav>
+                        <div class="navWrap">
+                            <a href="#TOP"><img src="kakusinenshou.png" alt="鶴志燃翔"></a>
+                            <div class="hamburger">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <ul class="navList">
+                                <li><a href="#date">DATE</a></li>
+                                <li><a href="#PV">PV</a></li>
+                                <li><a href="#news">NEWS</a></li>
+                                <li><a href="#MAP">MAP</a></li>
+                                <li><a href="#SCHEDULE">SCHEDULE</a></li>
+                                <li><a href="index2.html">展示・ステージ紹介</a></li>
+                                <li><a href="#ACCESS">ACCESS</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section id="date">
+                <div class="innerWrap">
+                    <h2>Date</h2>
+                    <div class="dateWrap">
+                        <p>2025.10.11 <span class="word1">Sat</span><br><span class="word2">8:35 - 15:30</span></p>
+                    </div>
+                </div>
+            </section> 
+            <section id="PV">
+                <div class="innerWrap">
+                <h2>PV</h2>
+                <p>
+                    -後日掲載します。-
+                    <!-- <video controls>
+                        <source src="C:\Users\admin\Desktop\Programing\R７文化祭\dance-club-example.mp4" type="video/mp4">
+                    </video> -->
+                </p>
+                </div>
+            </section>
+            <section id="news">
+                <div class="innerWrap">
+                    <h2>News</h2>
+                    <div class="information1">
+                        <div class="information2">
+                            <table>
+                                <tr><th>2025.9.21</th><th>当日は公共交通機関をご利用ください。<br>駐車場はございませんので、お車でのご来場はご遠慮ください。</th></tr>
+                                <tr><th>2025.9.21</th><th>スケジュールを公開しました。</th></tr>
+                                <tr><th>2025.9.21</th><th>公式サイトを公開しました。</th></tr>
+                            </table>
+                            <a href="index3.html" >以前のお知らせ→</a>
+                        </div>
+                    </div>
+                </div>
+            </section>   
+            <section id="MAP">
+                <div class="innerWrap">
+                <h2>Map</h2>
+                <p>
+                    <canvas id="map" width="600" height="400"></canvas>
+                </p>
+                <p>画面のマップは動かすことができます。<br>大きく表示される場合は、再度読み込んでください。これはまだ作っている途中です。後日更新予定です。</p>
+                <a href="index2.html" >展示紹介を見る→</a>
+                </div>
+            </section>
+            <section id="SCHEDULE">
+                <div class="innerWrap">
+                    <h2>Schedule</h2>
+                    <p>スケジュールは以下の通りです。時間は多少変動する恐れがあります。ご注意ください。<br>クリックすると、該当の紹介ページにとびます。</p>
+                    <div class="ingym">
+                        <h3>体育館</h3>
+                        <div class="Table">
+                            <div class="table_item1">
+                                <a href="index2.html#gymstage">
+                                    <section class="table_item"><h3>8:35-8:45</h3><p>開会行事</p></section>
+                                </a>
+                                <a href="index2.html#gymstage1">
+                                <section class="table_item"><h3> 8:50-9:15</h3><p>ダンス部</p></section>
+                                </a>
+                            </div>
+                            <div class="table_item1">
+                                <a href="index2.html#gymstage2">
+                                <section class="table_item"><h3> 9:20-9:35</h3><p>演劇部</p></section>
+                                </a>
+                                <a href="index2.html#gymstage3">
+                                <section class="table_item"><h3>9:50-10:05</h3><p>音楽部</p></section>
+                                </a>
+                            </div>
+                            <div class="table_item1">
+                                <a href="index2.html#gymstage4">
+                                    <section class="table_item"><h3> 10:10-10:30</h3><p>ESS部</p></section>
+                                </a>
+                                <a href="index2.html#gymstage5">
+                                    <section class="table_item"><h3>10:35-10:55</h3><p>放送部</p></section>
+                                </a>
+                            </div>
+                            <div class="table_item1">
+                                <a href="index2.html#gymstage6">
+                                <section class="table_item"><h3>11:10-11:30</h3><p>書道部</p></section>
+                                </a>
+                                <a href="index2.html#gymstage7">
+                                <section class="table_item"><h3>12:30-12:45</h3><p>The Brights</p></section>
+                                </a>
+                            </div>
+                            <div class="table_item1">
+                                <a href="index2.html#gymstage8">
+                                <section class="table_item"><h3>12:50-13:05</h3><p> S.A.E.K.I children</p></section>
+                                </a>
+                                <a href="index2.html#gymstage9">
+                                <section class="table_item"><h3>13:10-13:25</h3><p>フォルテピアノ</p></section>
+                                </a>
+                            </div>
+                            <div class="table_item1">
+                                <a href="index2.html#gymstage10">
+                                <section class="table_item"><h3>13:30-13:45</h3><p>OK's Harmony</p></section>
+                                </a>
+                                <a href="index2.html#gymstage11">
+                                <section class="table_item"><h3>14:55-15:20</h3><p>吹奏楽部</p></section>
+                                </a>
+                            </div>
+                            <a href="index2.html#gymstage">
+                                <section class="table_item"><h3>15:20-15:30</h3><p>閉会行事</p></section>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="outgym">
+                        <h3>体育館以外</h3>
+                        <div class="Table">
+                            <div class="table_item1">
+                                <a href="index2-Grade1.html">
+                                <section class="table_item"><h3>11:50-14:45</h3><p>展示開放</p></section>
+                                </a>
+                                <a href="index2-Club.html#club1">
+                                <section class="table_item"><h3>12:10-14:30</h3><p>茶道部</p></section>
+                                </a>
+                            </div>
+                            <a href="index2-Club.html#club2">
+                                <section class="table_item"><h3>12:10-</h3><p>書道部合同<br>パフォーマンス</p></section>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section  id="ACCESS">
+                <div class="innerWrap">
+                    <h2>Access</h2>
+                <div class="accessWrap">
+                <div>
+                <p>〒890-0042<br>鹿児島県鹿児島市薬師２丁目１−１<br>JR鹿児島中央駅から徒歩10分</p>
+                </div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3398.6150923568894!2d130.53553187423512!3d31.589601443720802!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x353e675c801f2815%3A0x1d93b4c47d6f800a!2z6bm_5YWQ5bO255yM56uL6ba05Li46auY562J5a2m5qCh!5e0!3m2!1sja!2sjp!4v1758089057414!5m2!1sja!2sjp" 
+                width="520" height="390" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+                </div>
+                </div>
+            </section>
+        </main>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <footer class="bg-gray-900">
+            <p class="mb-2">© 2025　鶴丸高校放送部・生徒会</p>
+            <div>
+                <ul class="footer-links">
+                    <li><a href="https://lit.link/Tsurumaru?fbclid=PAZXh0bgNhZW0CMTEAAafg-rkgVuDsvkap3XMmTwnZEV-7j0YLI3IE9N5KFO_iSdlNRX24WJ0ezOh5rQ_aem_sV10_ZfP3EiyC6LlNWRx1Q"><img class="tsurumaru_logo" src="tsurumaru-logo.jpg" alt="鶴丸高校のSNSの紹介ページ">
+                    </a></li>
+                    <li><a href="https://www.instagram.com/tsurumaruhs?utm_source=ig_web_button_share_sheet&igsh=MWloZDYxcmdjOHhqYw=="><img src="Instagram-white.png" alt="鶴丸高校公式インスタグラム"></a></li>
+                    <li><a href="https://www.instagram.com/tsuru_hs.sc?utm_source=ig_web_button_share_sheet&igsh=MWJscjZlbTlvYnVzYg=="><img src="Instagram-white.png" alt="鶴丸高校生徒会公式インスタグラム"></a></li>
+                    <li><a href="https://youtube.com/@tbc-1?si=AL5CQHkGjYLMeqWM"><img src="yt_icon_mono_dark.png" alt="鶴丸高校放送部のYouTube"></a></li>
+                </ul>
+            </div>
+        </footer>
+
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger');
+            const navList = document.querySelector('.navList');
+            const navLinks = document.querySelectorAll('.navList li a'); // すべてのリンク取得
+
+            // ハンバーガークリックで開閉
+            hamburger.addEventListener('click', function() {
+                hamburger.classList.toggle('active'); // ×アニメーション
+                navList.classList.toggle('show');     // メニュー表示
+            });
+
+            // li a をクリックしたらメニュー閉じる
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                hamburger.classList.remove('active'); // ×を戻す
+                navList.classList.remove('show');     // メニュー非表示
+                });
+            });
+        });
+        import * as THREE from "three";
+            import { GLTFLoader } from "https://unpkg.com/three@0.175.0/examples/jsm/loaders/GLTFLoader.js";
+            import { OrbitControls } from "https://unpkg.com/three@0.175.0/examples/jsm/controls/OrbitControls.js";
+
+            const canvas = document.querySelector("#map");
+            const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
+            const canvasWidth = window.innerWidth / 2;  // 50vw
+            const canvasHeight = window.innerHeight / 2; // 50vh
+            renderer.setSize(canvasWidth, canvasHeight);
+            renderer.setPixelRatio(window.devicePixelRatio);
+            renderer.setClearColor(0xFFFFFF); 
+
+            // シーン
+            const scene = new THREE.Scene();
+
+            // カメラ
+            const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 10000);
+            camera.position.set(0, 10, 30); // X:0, Y:200, Z:400
+            camera.lookAt(300, 100, 0);
+
+            // ライト
+            const dirLight = new THREE.DirectionalLight(0xffffff, 2);
+            dirLight.position.set(500, 1000, 500); 
+            scene.add(dirLight);
+            scene.add(new THREE.AmbientLight(0xffffff, 1.5)); // 全体を明るく
+
+            // GLB ロード
+            const loader = new GLTFLoader();
+            let model;
+            loader.load("./schoolmap.glb",
+            (gltf) => {
+                model = gltf.scene;
+                model.scale.set(25,25,25); // 大きさ調整（必要に応じて変更）
+                model.position.set(0, -100, 0);
+                scene.add(model);
+                console.log(model);
+            },
+            undefined,
+            (err) => console.error(err)
+            );
+
+            const axesHelper = new THREE.AxesHelper(1000); // 100 は長さ
+            scene.add(axesHelper);
+
+
+            // controls
+            const controls = new OrbitControls(camera, renderer.domElement);
+            controls.enablePan = false; // 平行移動は不可
+            controls.enableZoom = false; // ズームはOK
+
+            // 上下の可動域（ラジアン）
+            // 0に近いほど下向き、πに近いほど上向き
+            controls.minPolarAngle = Math.PI/4;   // 下限（少し下）
+            controls.maxPolarAngle = Math.PI/2;   // 上限（ほぼ真上）
+
+            controls.target.set(80, -50, 0); // 注視するポイントを設定
+            controls.update();               // 反映
+
+            const textureLoader = new THREE.TextureLoader();
+            const spriteMap = textureLoader.load('img/logo.png'); // 表示したい画像
+
+            const spriteMaterial = new THREE.SpriteMaterial({ map: spriteMap });
+            const sprite = new THREE.Sprite(spriteMaterial);
+
+            // 3D空間での位置指定
+            sprite.position.set(100, 50, 0); // X, Y, Z
+            sprite.scale.set(50, 50, 1);     // サイズ調整
+
+            scene.add(sprite);
+
+            function animate() {
+            requestAnimationFrame(animate);
+            controls.update();  // OrbitControls を使う場合必須
+            renderer.render(scene, camera);
+            }
+            animate();
+            // リサイズ対応
+            window.addEventListener("resize", () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            });
+        </script>
+        <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family:  'Sawarabi Mincho', 'MS 明朝', sans-serif;
+            background-color:#dfddf9;
+            color: black;
+        }
+        header {
+            background: white;
+            padding: 10px 20px;
+            margin-bottom: 40px;
+            height: 480px;
+        }
+        header h1 {
+            height: auto;
+            width: 200px;
+            margin: 0 0;
+            text-align: left;
+        }
+        header h1 img {
+            filter: saturate(200%);
+        }
+        .header_title{
+            display: flex;
+            width: 100%;
+            flex-direction: row; 
+            align-items: right;
+            gap: 20px;
+            justify-content: space-between;
+        }
+        header  h3 {
+            text-align: right;
+            width: 220px;
+            height: auto;
+            margin-top:-20px;
+        }
+        header h3 img{
+            width: 100%;
+        }
+
+        header h2 {
+            margin:-40px 0 0 20px;
+            font-size: 1.4em;
+            text-align: left;
+        }
+        header p {
+            margin: 5px 0 20px 30px;
+            font-size: 1.2em;
+            text-align: left;
+        }
+        header h2, header p { 
+
+            background: linear-gradient(to right, red, yellow); /* 赤→黄 */
+            -webkit-background-clip: text;   /* テキストに背景をクリップ */
+            background-clip: text;
+            color: transparent;              /* 文字の塗りつぶしを透明に */
+        }
+        header h4{
+            text-align: center;
+            font-size: 1.5em;
+            width: 160px;
+            background:rgb(245,  53, 63);
+            border-radius: 10px;
+            padding: 10px;
+            margin-top: 15px;
+            margin-left: 30px;
+            color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .headerWrap>a{
+            text-decoration: none;
+        }
+        .headerWrap>a :hover{
+            background-color:rgb(251, 234, 223);
+            color: rgb(255, 14, 34);
+        }
+        .header_h1{order: 1;}
+        .header_h3{order: 2;}
+        header .headerWrap {
+            margin-top: 90px;
+        }
+        header nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            text-decoration: none;
+            font-size: 0.8em;
+            z-index: 100;
+        }
+        .navList {
+            list-style: none;
+            padding: 10px 20px;
+            margin: 0;
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            color: rgb(248, 246, 246);
+            text-decoration: none;
+        }
+        .navList li {
+            margin: 0 15px;
+        }
+        .navList li a {
+            color: #0c0c0c;
+            text-decoration: none;
+            font-weight: bold;
+        } 
+        .header_wrap::after{
+            content: "";
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;  
+            background: url("image2.jpg") no-repeat center/cover;
+            z-index: -1;
+        }
+        .navWrap {
+            display: flex;
+            background-color: rgba(243, 182, 108, 0.5);
+            position: relative;
+        }
+        header nav img {
+            margin: 5px 0 0 10px;
+            width: auto;
+            height: 30px;
+            vertical-align: left;
+        }
+        .navList li a:hover {
+            text-decoration: underline double;
+        }
+        .innerWrap {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .dateWrap {
+            display: flex;
+        }
+        .dateWrap img{
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            flex-basis: 735px;
+        }
+        .dateWrap div {
+            flex-basis: 465px;
+            padding-top: 100px;
+        }
+        .dateWrap p {
+            width: 100%;
+            padding:40px 154px;
+            line-height: 1.2;
+            font-size: 3.5em;
+            margin: 0 auto;
+            text-align: center;
+            background-color: #FFCCCC;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            bottom: 0;
+        }
+        main{
+            overflow-x: hidden;
+        }
+        main h2 {
+            font-size: 2em;
+            border-bottom: 2px solid black;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+            letter-spacing: .05em;
+        }
+        main section {
+            margin: top 40px;
+            margin-bottom: 40px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        main section p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        main section table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            text-align: center;
+        }
+        main h3 {
+            font-size: 1.5em;
+            border-bottom: 2px dotted black;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+            letter-spacing: .05em;
+        }
+        .information2 table tr {
+            font-size: 1.0em;
+            line-height: 1.4;
+            border-top: black solid 1px;
+            border-bottom:black solid 1px;
+            padding-bottom: 20px;
+        }
+        .information2  {
+            padding: 20px;
+            background-color: #FFCCCC	;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .information2 table{
+            padding: 20px 40px;
+            margin-bottom: 20px;
+            width: 100%;
+            margin: 0 auto;
+            bottom: 0;
+        }
+        .information2 a{
+            text-align: center;
+            width : 20%;
+            margin: 20px auto 0;
+            display: block;
+            background-color: #3b150a;
+            color: white;
+            text-decoration: none;
+            padding: 5px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 1em;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .information2 a:hover {
+            background-color: rgb(248, 239, 226);
+            color: #000000;
+        }
+        .word1 {
+            font-size: 0.7em;
+        }
+        .word2 {
+            font-size: 0.8em;
+        }
+        .Table p{
+            padding: 20px auto;
+        }
+        .Table h3{
+            padding: 20px auto 10px;
+        }
+        .table_item1{
+            display: flex;
+            justify-content:space-around;
+        }
+        .Table a .table_item{
+            width: 220px;
+            height: 100px;
+            padding: 40px ;
+            margin:  20px auto;
+            background-color: #FFCCCC	;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: block;
+        }
+        .Table a .table_item h3{
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        .Table a .table_item p{
+            margin-top: 0;
+            padding: auto;
+            font-size: 1.8em;
+        }
+        .Table a{
+            text-decoration: none;
+            color: #0c0c0c;
+        }
+        .Table a :hover{
+            background-color: rgb(248, 239, 226);
+        }
+        .accessWrap{
+            display: flex;
+        }
+        .accessWrap iframe{
+            flex-grow: 1;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-left: 20px;
+        }
+        #MAP{
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        #MAP a {
+            text-align: center;
+            width : 30%;
+            margin: 5px auto 0;
+            display: block;
+            background-color: #FFCCCC	;
+            color: black;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 1em;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-size: 1.2em;
+            text-decoration: none;
+        }
+        #MAP a:hover {
+            background-color: rgb(248, 239, 226) ;
+        }
+        #PV p video{
+            width: 640px ;
+            height: 360px;
+        }
+        .hamburger {
+        display: none; /* PCでは非表示 */
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 22px;
+        cursor: pointer;
+        position: absolute;  /* 親（navWrap）に対して絶対配置 */
+        top: 10px;           /* 上から15px */
+        right: 20px;         /* 右から20px */
+        z-index: 200;        /* メニューより前面に出す */
+        }
+        .hamburger span {
+        display: block;
+        height: 3px;
+        background: #333;
+        border-radius: 2px;
+        transition: 0.3s ease;
+        }
+        .detail{
+            display: none;
+            color: #0c0c0c;
+            text-align: center;
+        }
+        .to_TOP{
+            height: 70px;
+            width: 70px;
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background-color:rgba(246, 224, 193, 0.7);
+            text-align: center;
+            border-radius:50% ;
+            z-index: 100;
+            text-decoration: underline none;
+            position:fixed; 
+            border: #0c0c0c solid 0.1em;
+        }
+        .to_TOP p {
+            width: 70px;
+            height: auto;
+            text-align: center;
+            font-size: 1.0em;
+            background: linear-gradient(to right, rgb(255, 0, 0), rgb(255, 166, 0)); /* 赤→黄 */
+            -webkit-background-clip: text;   /* テキストに背景をクリップ */
+            background-clip: text;
+            color: transparent;
+            margin : 0;
+            transform: translate(0%, 150%);
+        }
+        body>a :hover {
+            background-color: rgba(255, 204, 204, 0.7) ;
+        }
+        footer {
+            font-size: 0.9em;
+            background-color:  rgba(243, 182, 108);
+            color: black;
+            text-align: center;
+            padding: 5px 0;
+            margin-top: 30px;
+        }
+        footer img{
+            width: auto;
+            height: 40px;
+        }
+        .footer-links{
+            display: flex;
+            margin-top: 10px;
+        }
+        footer a {
+            text-decoration: none;
+            color: #7c5106;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        footer ul li{
+            list-style: none;
+        }
+        footer a:hover{
+            text-decoration: #4d1919 underline solid ;
+            color: #4d1919;
+        }
+        .bg-gray-900 {
+            display: flex;
+            justify-content: space-around;
+        }
+        .tsurumaru_logo{
+            border-radius: 50%;
+            height: 42px;
+        }
+        @media screen and (max-width: 800px){
+            header h1{
+                margin-top: -20px;
+            }
+            header h3{
+                margin-top: 90px;
+                margin-right: -40px;
+            }
+            header h2 {
+                margin-top: -170px;
+                height: 200px;
+            }
+            header p {
+                margin-top: -165px;
+            }
+            .hamburger {
+            display: flex; /* スマホでは表示 */
+            }
+            .hamburger.active span:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+            .hamburger.active span:nth-child(2) {
+                opacity: 0; /* 真ん中の線を消す */
+            }
+            .hamburger.active span:nth-child(3) {
+                transform: rotate(-45deg) translate(5px, -5px);
+            }
+            .navList {
+                display: none;              /* 非表示 */
+                flex-direction: column;     /* 縦並び */
+                background: rgba(245, 212, 171, 0.80);
+                position: absolute;
+                top: 40px;
+                right: 0;
+                width: 100%;
+                padding: 10px 0;
+            }
+            .navList.show {
+                display: flex; /* .showが付いたら表示 */
+            }
+            .navList li {
+                margin: 3vh 10px;
+                padding-bottom: 3vh;
+                border-bottom: 1px #3b150a solid;
+            }
+            .navList.show {
+            right: 0; /* 画面内にスライド */
+        }
+            header nav{
+                width: 100%;
+                text-align: center;
+                font-size: 1.0em;
+            }
+        }
+        @media screen and (max-width: 640px) {
+            .header_title{
+                display: fixed;
+                flex-direction: column;
+                text-align: center;
+            }
+            header h3{
+                text-align: center;
+                height:30vh;
+                width: auto;
+                margin: 0 auto 0;
+            }
+            header .headerWrap{
+                margin-top: 15vh;
+            }
+            header h3 img{
+                height: 100%;
+            }
+            header{
+                height: 90vh;
+                text-align: center;
+            }
+            header h1 {
+                width: 100%;
+                padding-top: 30px;
+                text-align: center;
+                margin-bottom: 30px;
+            }
+            header h1 img{
+                width: 100%;
+            }
+            .header_h3{order: 1;}
+            .header_h1{order: 2;}
+            header h2 {
+                text-align: center;
+                font-size: 1.2em;
+                margin: -20px 0 0 20px;
+            }
+            header p {
+                text-align: center;
+                font-size: 1em;
+                margin: -150px 0 5px 20px;
+            }
+            .headerWrap a {
+                text-align: center;
+                margin:0,auto;
+            }
+            header h4{
+                margin: 8vh auto;
+            }
+            .dateWrap{
+                width: 100%;
+            }
+        .innerWrap {
+                width: 90%;
+                margin: 0 auto;
+                padding: 10px;
+            }
+            .dateWrap img{
+                width: 100%;
+                height: auto;
+                margin: 0 auto;
+            }
+            .dateWrap div {
+                width: 100%;
+                padding: 20px 0 0 0;
+            }
+            .dateWrap p {
+                font-size: 2.5em;
+                padding: 20px 40px;
+            }
+            main h2 {
+                font-size: 1.5em;
+            }
+            main h3 {
+                font-size: 1.2em;
+            }
+            main section {
+                margin: top 20px;
+                margin-bottom: 20px;
+                padding: 10px;
+            }
+            main section p {
+                font-size: 1em;
+            }
+            main section table {
+                font-size: 0.8em;
+            }
+            .information2 table{
+                padding: 10px 20px;
+            }
+            .information2 a{
+                width : 50%;
+                font-size: 0.8em;
+            }
+            .Table{
+                padding: 20px;
+            }
+            .table_item1{
+                display: inline;
+            }
+            #MAP a {
+                width : 50%;
+                font-size: 1em;
+            }
+            .accessWrap{
+                flex-direction: column;
+            }
+            .accessWrap iframe{
+                width: 100%;
+                height: 50vw;
+                margin: 20px auto 0 auto;
+            }
+            #PV p video{
+                width: 100%;
+                height: auto;
+            }
+            .footer-links a {
+            display: block;       /* ブロック要素にして縦並びに */
+            margin: 10px 0;       /* 上下に余白を追加 */
+        }
+        table {
+            width: 95%; /* 横幅いっぱいに */
+        }
+
+        table {
+            padding: 10px;
+            font-size: 0.9em; /* 文字少し小さめ */
+        }
+
+        table th {
+            display: block;           /* 日付と本文を縦積みに */
+            border-bottom: none;
+            padding: 5px 0;
+        }
+        table tr {
+            display: block;
+            margin-bottom: 15px;
+            border-top:none;
+            border-bottom: 1px solid #000000;
+            padding-bottom: 15px;
+        }
+        .bg-gray-900{
+            display: block;
+        }
+        .footer-links{
+            padding: 0;
+            margin-left: 10px;
+            margin-right: 10px;
+            justify-content: space-around;
+        }
+
+        }
+        </style>
+
+
+    </body>
+</html>
