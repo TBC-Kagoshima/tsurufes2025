@@ -4,8 +4,8 @@ import { OrbitControls } from "https://unpkg.com/three@0.175.0/examples/jsm/cont
 
 const canvas = document.querySelector("#map");
 const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
-const canvasWidth = window.innerWidth / 2;  // 50vw
-const canvasHeight = window.innerHeight / 2; // 50vh
+const canvasWidth = window.innerWidth / 2.5;
+const canvasHeight = window.innerHeight / 2; 
 renderer.setSize(canvasWidth, canvasHeight);
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setClearColor(0xFFFFFF); 

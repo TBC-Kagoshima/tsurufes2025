@@ -1,4 +1,4 @@
-const target = document.getElementById('PV');
+const target = document.getElementById('date');
 const changeElement1 = document.querySelector('.navWrap');
 window.addEventListener('scroll', () => {
   const rect = target.getBoundingClientRect();
