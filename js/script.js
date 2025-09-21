@@ -1,4 +1,4 @@
-const target = document.querySelector('PV');
+const target = document.getElementById('PV');
 const changeElement1 = document.querySelector('navWrap');
 window.addEventListener('scroll', () => {
   const rect = target.getBoundingClientRect();
