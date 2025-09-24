@@ -27,7 +27,7 @@ scene.add(new THREE.AmbientLight(0xffffff, 1.5)); // 全体を明るく
 // GLB ロード
 const loader = new GLTFLoader();
 let model;
-loader.load("./schoolmap.glb",
+loader.load("../img/schoolmap.glb",
   (gltf) => {
     model = gltf.scene;
     model.scale.set(25,25,25); // 大きさ調整（必要に応じて変更）
