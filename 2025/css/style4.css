@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     font-family:  'Sawarabi Mincho', 'MS 明朝', serif;
-    background-color:#dfddf9;
+    background-color:#f2a318;
 }
 header {
     width: 80%;
@@ -152,4 +152,5 @@ body>a :hover {
   main{
     margin-bottom: 20px;
   }
+
 }
