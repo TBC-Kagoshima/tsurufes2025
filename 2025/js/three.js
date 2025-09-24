@@ -57,7 +57,7 @@ controls.target.set(80, -50, 0); // 注視するポイントを設定
 controls.update();               // 反映
 
 const textureLoader = new THREE.TextureLoader();
-const spriteMap = textureLoader.load('img/logo.png'); // 表示したい画像
+const spriteMap = textureLoader.load('img/aikon.png'); // 表示したい画像
 
 const spriteMaterial = new THREE.SpriteMaterial({ map: spriteMap });
 const sprite = new THREE.Sprite(spriteMaterial);
