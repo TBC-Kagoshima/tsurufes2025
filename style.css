@@ -81,10 +81,16 @@ h2{
 }
 .floor a {
     text-decoration: none;
+    text-shadow: 2px 4px rgba(0,0,0,0.2);
     color: gray;
     padding-right: 2vw;
     padding-left: 2vw;
     font-size:2vw;
+}
+.floor a:active {
+    color:black;
+    text-shadow: none;
+    transform: translate(2px, 4px); 
 }
 #realtime div {
     font-size:2.5vw;
@@ -100,4 +106,5 @@ h2{
     top:1vh;
     right:0;
     width:52vw;
+
 }
