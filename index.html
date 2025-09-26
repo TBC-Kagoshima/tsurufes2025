@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>当日サイネージ - 77th鶴文祭</title>
+        <meta name="description" content="第77回鶴丸高校文化祭公式サイトです。" />
+        <meta name="format-detection" content="telephone=no" />
+        <link rel="icon" href="" type="image/svg+xml">
+        <link rel="apple-touch-icon" href="https://drive.google.com/file/d/1gQ3ZGGFl1yQxwy0cy_QmmY_6MgOG1kat/view?usp=drive_link" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="style.css">
+        <script type="importmap">
+            {
+                "imports": {
+                "three": "https://cdn.jsdelivr.net/npm/three@0.175.0/build/three.module.js"
+                 }
+            }
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+        <script src="./three.js" type="module"></script>
+    </head>
+    <body>
+            <video class="background" loop autoplay muted playsinline >
+                    <source src="thizer.mp4" type="video/mp4">
+            </video>
+        <div class="main">
+            <div class="div1">
+                <section id="clockwrap">
+                    <h2>現在時刻</h2>
+                    <h3 id="clock"></h3>
+                </section>
+                <section id="schedulewrap">
+                    <h2>スケジュール
+                        <br>
+                        <span style="font-size:1vw;">
+                            直近3件のスケジュール及びそれ以降のスケジュールを表示しています。
+                            <br>
+                            ※トラブルにより遅延が発生する場合がございます。
+                        </span>
+                    </h2>
+                    <h3 id="realtime">データ取得中</h3>
+                </section>
+            </div>
+            <div class="div2">
+                <section id="mapwrap">
+                    <h2>校内案内</h2>
+                    <canvas id="map" width="40vw" height="400">
+                    </canvas>
+                    <div class="floor">
+                    <a id="location" href="#" data-x="-150" data-y="25" data-z="100">体育館</a>
+                    <a id="location" href="#" data-x="75" data-y="30" data-z="30">生徒館</a>
+                    <a id="location" href="#" data-x="-5" data-y="30" data-z="200">キッチンカー</a>
+                </div>
+                </section>
+                <section id="footerwrap">
+                    <img src="footer.svg">
+                </section>
+            </div>
+        </div>
+        <script src="script.js">
+        </script>
+    </body>
+</html>
