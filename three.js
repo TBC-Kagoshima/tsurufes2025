@@ -90,8 +90,16 @@ document.querySelectorAll("#location").forEach(a => {
 });
 
 // リサイズ対応
-window.addEventListener("resize", () => {
-  camera.aspect = window.innerWidth / window.innerHeight;
-  camera.updateProjectionMatrix();
-  renderer.setSize(window.innerWidth, window.innerHeight);
-});
+window.addEventListener('resize', () => {
+  const width = window.innerWidth
+  const height = window.innerHeight
+
+  // カメラのアスペクトを更新
+  camera.aspect = width / height
+  camera.updateProjectionMatrix()
+
+  // レンダラーのサイズを更新
+  renderer.setSize(width, height)
+  // ピクセル比率もついでに
+  renderer.setPixelRatio(window.devicePixelRatio)
+})
