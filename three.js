@@ -51,7 +51,7 @@ controls.enableZoom = false; // ズームはOK
 // 上下の可動域（ラジアン）
 // 0に近いほど下向き、πに近いほど上向き
 controls.minPolarAngle = Math.PI/4;   // 下限（少し下）
-controls.maxPolarAngle = Math.PI/2;   // 上限（ほぼ真上）
+controls.maxPolarAngle = Math.PI/1.9;   // 上限（ほぼ真上）
 
 controls.target.set(0, 0, 0); // 注視するポイントを設定
 controls.update();               // 反映
@@ -129,41 +129,41 @@ function createSprite(texture, position) {
   const material = new THREE.SpriteMaterial({ map: texture, transparent: true })
   const sprite = new THREE.Sprite(material)
   sprite.position.set(position.x, position.y, position.z)
-  sprite.scale.set(2, 2, 1) // 大きさ調整（横, 縦, 奥行き）
+  sprite.scale.set(11, 11, 1) // 大きさ調整（横, 縦, 奥行き）
   return sprite
 }
 
 // スプライト作成
-const sprite11       = createSprite(tex11,       new THREE.Vector3(0, 0, -5))
-const sprite12       = createSprite(tex12,       new THREE.Vector3(3, 1, -5))
-const sprite13       = createSprite(tex13,       new THREE.Vector3(6, 2, -5))
-const sprite14       = createSprite(tex14,       new THREE.Vector3(9, 3, -5))
-const sprite15       = createSprite(tex15,       new THREE.Vector3(12, 4, -5))
-const sprite16       = createSprite(tex16,       new THREE.Vector3(15, 5, -5))
-const sprite18       = createSprite(tex18,       new THREE.Vector3(18, 6, -5))
-const sprite21       = createSprite(tex21,       new THREE.Vector3(21, 7, -5))
-const sprite22       = createSprite(tex22,       new THREE.Vector3(24, 8, -5))
-const sprite23       = createSprite(tex23,       new THREE.Vector3(27, 9, -5))
-const sprite24       = createSprite(tex24,       new THREE.Vector3(30, 10, -5))
-const sprite25       = createSprite(tex25,       new THREE.Vector3(33, 11, -5))
-const sprite26       = createSprite(tex26,       new THREE.Vector3(36, 12, -5))
-const sprite27       = createSprite(tex27,       new THREE.Vector3(39, 13, -5))
-const spriteShodo    = createSprite(texshodo,    new THREE.Vector3(42, 14, -5))
-const spriteKagaku   = createSprite(texkagaku,   new THREE.Vector3(45, 15, -5))
+const sprite11       = createSprite(tex11,       new THREE.Vector3(65, 20, 48))//
+const sprite12       = createSprite(tex12,       new THREE.Vector3(65, 20, 33))//
+const sprite13       = createSprite(tex13,       new THREE.Vector3(65, 20, 18))//
+const sprite14       = createSprite(tex14,       new THREE.Vector3(65, 20, 3))//
+const sprite15       = createSprite(tex15,       new THREE.Vector3(65, 20, -29))//
+const sprite16       = createSprite(tex16,       new THREE.Vector3(65, 20, -44))//
+const sprite18       = createSprite(tex18,       new THREE.Vector3(65, 20, -74))//
+const sprite21       = createSprite(tex21,       new THREE.Vector3(65, 33, 48))//
+const sprite22       = createSprite(tex22,       new THREE.Vector3(65, 33, 33))//
+const sprite23       = createSprite(tex23,       new THREE.Vector3(65, 33, 18))//
+const sprite24       = createSprite(tex24,       new THREE.Vector3(65, 33, 3))//
+const sprite25       = createSprite(tex25,       new THREE.Vector3(65, 33, -29))//
+const sprite26       = createSprite(tex26,       new THREE.Vector3(65, 33, -44))//
+const sprite27       = createSprite(tex27,       new THREE.Vector3(65, 33, -59))//
+const spriteShodo    = createSprite(texshodo,    new THREE.Vector3(29, 7, -70))//
+const spriteKagaku   = createSprite(texkagaku,   new THREE.Vector3(65, 7, 3))//
 const spriteEleve    = createSprite(texeleve,    new THREE.Vector3(48, 16, -5))
-const spriteQuiz     = createSprite(texquiz,     new THREE.Vector3(51, 17, -5))
+const spriteQuiz     = createSprite(texquiz,     new THREE.Vector3(65, 33,105))//
 const spriteStairs   = createSprite(texstairs,   new THREE.Vector3(54, 18, -5))
-const spriteYama     = createSprite(texyama,     new THREE.Vector3(57, 19, -5))
-const spritePhoto    = createSprite(texphoto,    new THREE.Vector3(60, 20, -5))
+const spriteYama     = createSprite(texyama,     new THREE.Vector3(65, 20, 76))//
+const spritePhoto    = createSprite(texphoto,    new THREE.Vector3(70, 7, 127))//
 const spriteFemale   = createSprite(texfemale,   new THREE.Vector3(63, 21, -5))
-const spriteMath     = createSprite(texmath,     new THREE.Vector3(66, 22, -5))
-const spriteTamokuteki = createSprite(textamokuteki, new THREE.Vector3(69, 23, -5))
+const spriteMath     = createSprite(texmath,     new THREE.Vector3(65, 33, 65))//
+const spriteTamokuteki = createSprite(textamokuteki, new THREE.Vector3(-111, 7, 134))//
 const spriteMale     = createSprite(texmale,     new THREE.Vector3(72, 24, -5))
-const spriteSado     = createSprite(texsado,     new THREE.Vector3(75, 25, -5))
-const spriteArt      = createSprite(texart,      new THREE.Vector3(78, 26, -5))
-const spriteHyaku    = createSprite(texhyaku,    new THREE.Vector3(81, 27, -5))
-const spriteCentence = createSprite(texcentence, new THREE.Vector3(84, 28, -5))
-const spriteHospital = createSprite(texhospital, new THREE.Vector3(87, 29, -5))
+const spriteSado     = createSprite(texsado,     new THREE.Vector3(116, 7, 103))//
+const spriteArt      = createSprite(texart,      new THREE.Vector3(70, 46, 127))//
+const spriteHyaku    = createSprite(texhyaku,    new THREE.Vector3(100, 7, 72))//
+const spriteCentence = createSprite(texcentence, new THREE.Vector3(75, 20, 84))//
+const spriteHospital = createSprite(texhospital, new THREE.Vector3(-10, 7, -19))//
 
 
 
