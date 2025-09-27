@@ -3,6 +3,7 @@ import { GLTFLoader } from "https://unpkg.com/three@0.175.0/examples/jsm/loaders
 import { OrbitControls } from "https://unpkg.com/three@0.175.0/examples/jsm/controls/OrbitControls.js";
 
 const canvas = document.querySelector("#map");
+const container = document.querySelector(".innerwrap")
 const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
 renderer.setClearColor(0xFFFFFF); 
 
@@ -25,7 +26,7 @@ const canvasRatio = { width: 2.5, height: 2 };
 
 function setRendererSize() {
   // canvas 幅は画面幅に合わせ、最大 800px
-  const width = Math.min(window.innerWidth, 800);
+  const width = container.clientWidth;   // 親要素の幅に合わせる
   // 高さは画面高さに合わせつつ、最大 600px に制限
   const height = Math.min(window.innerHeight, 600);
 
