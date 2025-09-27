@@ -6,6 +6,20 @@ const canvas = document.querySelector("#map");
 const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
 renderer.setClearColor(0xFFFFFF); 
 
+
+// シーン
+const scene = new THREE.Scene();
+
+// カメラ
+const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 10000);
+camera.position.set(0, 10, 30); // X:0, Y:200, Z:400
+
+// ライト
+const dirLight = new THREE.DirectionalLight(0xffffff, 2);
+dirLight.position.set(500, 1000, 500); 
+scene.add(dirLight);
+scene.add(new THREE.AmbientLight(0xffffff, 1.5)); // 全体を明るく
+
 // キャンバス比率を定義
 const canvasRatio = { width: 2.5, height: 2 };
 
@@ -29,18 +43,6 @@ window.addEventListener('resize', () => {
   setRendererSize();
 });
 
-// シーン
-const scene = new THREE.Scene();
-
-// カメラ
-const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 10000);
-camera.position.set(0, 10, 30); // X:0, Y:200, Z:400
-
-// ライト
-const dirLight = new THREE.DirectionalLight(0xffffff, 2);
-dirLight.position.set(500, 1000, 500); 
-scene.add(dirLight);
-scene.add(new THREE.AmbientLight(0xffffff, 1.5)); // 全体を明るく
 
 // GLB ロード
 const loader = new GLTFLoader();
