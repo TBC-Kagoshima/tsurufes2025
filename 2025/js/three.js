@@ -56,27 +56,127 @@ controls.maxPolarAngle = Math.PI/2;   // 上限（ほぼ真上）
 controls.target.set(80, -50, 0); // 注視するポイントを設定
 controls.update();               // 反映
 
-const textureLoader = new THREE.TextureLoader();
-const spriteMap = textureLoader.load('img/aikon.png'); // 表示したい画像
+// 画像のテクスチャを読み込み
+const textureLoader = new THREE.TextureLoader()
+// ベースのパスを定義
+const basePath = '../img/3d/';
 
-const spriteMaterial = new THREE.SpriteMaterial({ map: spriteMap });
-const sprite = new THREE.Sprite(spriteMaterial);
+const tex11 = textureLoader.load(basePath + '11.svg');
+const tex12 = textureLoader.load(basePath + '12.svg');
+const tex13 = textureLoader.load(basePath + '13.svg');
+const tex14 = textureLoader.load(basePath + '14.svg');
+const tex15 = textureLoader.load(basePath + '15.svg');
+const tex16 = textureLoader.load(basePath + '16.svg');
+const tex18 = textureLoader.load(basePath + '18.svg');
+const tex21 = textureLoader.load(basePath + '21.svg');
+const tex22 = textureLoader.load(basePath + '22.svg');
+const tex23 = textureLoader.load(basePath + '23.svg');
+const tex24 = textureLoader.load(basePath + '24.svg');
+const tex25 = textureLoader.load(basePath + '25.svg');
+const tex26 = textureLoader.load(basePath + '26.svg');
+const tex27 = textureLoader.load(basePath + '27.svg');
 
-// 3D空間での位置指定
-sprite.position.set(100, 50, 0); // X, Y, Z
-sprite.scale.set(50, 50, 1);     // サイズ調整
+const texshodo     = textureLoader.load(basePath + '書道部.svg');
+const texkagaku    = textureLoader.load(basePath + '化学部.svg');
+const texeleve     = textureLoader.load(basePath + 'エレベーター.svg');
+const texquiz      = textureLoader.load(basePath + 'クイズ研究会.svg');
+const texstairs    = textureLoader.load(basePath + '階段.svg');
+const texyama      = textureLoader.load(basePath + '山岳部.svg');
+const texphoto     = textureLoader.load(basePath + '写真部.svg');
+const texfemale    = textureLoader.load(basePath + '女子トイレ.svg');
+const texmath      = textureLoader.load(basePath + '数学研究.svg');
+const textamokuteki= textureLoader.load(basePath + '多目的.svg');
+const texmale      = textureLoader.load(basePath + '男子トイレ.svg');
+const texsado      = textureLoader.load(basePath + '茶道部.svg');
+const texart       = textureLoader.load(basePath + '美術部.svg');
+const texhyaku     = textureLoader.load(basePath + '百人一首部.svg');
+const texcentence  = textureLoader.load(basePath + '文芸部.svg');
+const texhospital  = textureLoader.load(basePath + '保健室.svg');
 
-scene.add(sprite);
+// …必要な分だけ load()
 
-function animate() {
-  requestAnimationFrame(animate);
-  controls.update();  // OrbitControls を使う場合必須
-  renderer.render(scene, camera);
+// スプライトを作る関数
+function createSprite(texture, position) {
+  const material = new THREE.SpriteMaterial({ map: texture, transparent: true })
+  const sprite = new THREE.Sprite(material)
+  sprite.position.set(position.x, position.y, position.z)
+  sprite.scale.set(11, 11, 1) // 大きさ調整（横, 縦, 奥行き）
+  return sprite
 }
-animate();
-// リサイズ対応
-window.addEventListener("resize", () => {
-  camera.aspect = window.innerWidth / window.innerHeight;
-  camera.updateProjectionMatrix();
-  renderer.setSize(window.innerWidth, window.innerHeight);
-});
+
+// スプライト作成
+const sprite11       = createSprite(tex11,       new THREE.Vector3(65, 20, 48))//
+const sprite12       = createSprite(tex12,       new THREE.Vector3(65, 20, 33))//
+const sprite13       = createSprite(tex13,       new THREE.Vector3(65, 20, 18))//
+const sprite14       = createSprite(tex14,       new THREE.Vector3(65, 20, 3))//
+const sprite15       = createSprite(tex15,       new THREE.Vector3(65, 20, -29))//
+const sprite16       = createSprite(tex16,       new THREE.Vector3(65, 20, -44))//
+const sprite18       = createSprite(tex18,       new THREE.Vector3(65, 20, -74))//
+const sprite21       = createSprite(tex21,       new THREE.Vector3(65, 33, 48))//
+const sprite22       = createSprite(tex22,       new THREE.Vector3(65, 33, 33))//
+const sprite23       = createSprite(tex23,       new THREE.Vector3(65, 33, 18))//
+const sprite24       = createSprite(tex24,       new THREE.Vector3(65, 33, 3))//
+const sprite25       = createSprite(tex25,       new THREE.Vector3(65, 33, -29))//
+const sprite26       = createSprite(tex26,       new THREE.Vector3(65, 33, -44))//
+const sprite27       = createSprite(tex27,       new THREE.Vector3(65, 33, -59))//
+const spriteShodo    = createSprite(texshodo,    new THREE.Vector3(29, 7, -70))//
+const spriteKagaku   = createSprite(texkagaku,   new THREE.Vector3(65, 7, 3))//
+const spriteEleve    = createSprite(texeleve,    new THREE.Vector3(48, 16, -5))
+const spriteQuiz     = createSprite(texquiz,     new THREE.Vector3(65, 33,105))//
+const spriteStairs   = createSprite(texstairs,   new THREE.Vector3(54, 18, -5))
+const spriteYama     = createSprite(texyama,     new THREE.Vector3(65, 20, 76))//
+const spritePhoto    = createSprite(texphoto,    new THREE.Vector3(70, 7, 127))//
+const spriteFemale   = createSprite(texfemale,   new THREE.Vector3(63, 21, -5))
+const spriteMath     = createSprite(texmath,     new THREE.Vector3(65, 33, 65))//
+const spriteTamokuteki = createSprite(textamokuteki, new THREE.Vector3(-111, 7, 134))//
+const spriteMale     = createSprite(texmale,     new THREE.Vector3(72, 24, -5))
+const spriteSado     = createSprite(texsado,     new THREE.Vector3(116, 7, 103))//
+const spriteArt      = createSprite(texart,      new THREE.Vector3(70, 46, 127))//
+const spriteHyaku    = createSprite(texhyaku,    new THREE.Vector3(100, 7, 72))//
+const spriteCentence = createSprite(texcentence, new THREE.Vector3(75, 20, 84))//
+const spriteHospital = createSprite(texhospital, new THREE.Vector3(-10, 7, -19))//
+
+
+
+scene.add(sprite11)
+scene.add(sprite12)
+scene.add(sprite13)
+scene.add(sprite14)
+scene.add(sprite15)
+scene.add(sprite16)
+scene.add(sprite18)
+scene.add(sprite21)
+scene.add(sprite22)
+scene.add(sprite23)
+scene.add(sprite24)
+scene.add(sprite25)
+scene.add(sprite26)
+scene.add(sprite27)
+scene.add(spriteShodo)
+scene.add(spriteKagaku)
+scene.add(spriteEleve)
+scene.add(spriteQuiz)
+scene.add(spriteStairs)
+scene.add(spriteYama)
+scene.add(spritePhoto)
+scene.add(spriteFemale)
+scene.add(spriteMath)
+scene.add(spriteTamokuteki)
+scene.add(spriteMale)
+scene.add(spriteSado)
+scene.add(spriteArt)
+scene.add(spriteHyaku)
+scene.add(spriteCentence)
+scene.add(spriteHospital)
+
+
+
+window.addEventListener('resize', () => {
+  const width = window.innerWidth
+  const height = window.innerHeight
+
+  camera.aspect = width / height
+  camera.updateProjectionMatrix()
+
+  renderer.setSize(width, height)
+})
