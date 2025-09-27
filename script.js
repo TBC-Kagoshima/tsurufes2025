@@ -82,3 +82,5 @@ function updateClock() {
             // 1秒ごとに更新
             setInterval(updateClock, 1000);
             updateClock(); // ページ読み込み直後にも一度表示
+
+            
