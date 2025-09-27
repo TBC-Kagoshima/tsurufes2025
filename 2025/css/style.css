@@ -304,6 +304,7 @@
         #MAP{
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
         }
         #MAP a {
             text-align: center;
@@ -323,6 +324,13 @@
         #MAP a:hover {
             background-color: rgb(248, 239, 226) ;
         }
+          #map {
+            display: block;
+            width: 100%;
+            max-width: 800px; /* 最大幅を800pxに制限 */
+            margin: 0 auto; /* 中央に配置 */
+        }
+        
         #PV p video{
             width: 640px ;
             height: 360px;
