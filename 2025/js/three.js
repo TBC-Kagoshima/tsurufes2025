@@ -4,11 +4,30 @@ import { OrbitControls } from "https://unpkg.com/three@0.175.0/examples/jsm/cont
 
 const canvas = document.querySelector("#map");
 const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
-const canvasWidth = window.innerWidth / 2.5;
-const canvasHeight = window.innerHeight / 2; 
-renderer.setSize(canvasWidth, canvasHeight);
-renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setClearColor(0xFFFFFF); 
+
+// キャンバス比率を定義
+const canvasRatio = { width: 2.5, height: 2 };
+
+// 初期サイズ設定
+function setRendererSize() {
+  const canvasWidth = window.innerWidth / canvasRatio.width;
+  const canvasHeight = window.innerHeight / canvasRatio.height;
+
+  camera.aspect = canvasWidth / canvasHeight;
+  camera.updateProjectionMatrix();
+
+  renderer.setSize(canvasWidth, canvasHeight);
+  renderer.setPixelRatio(window.devicePixelRatio);
+}
+
+// 最初のサイズ設定
+setRendererSize();
+
+// リサイズイベント
+window.addEventListener('resize', () => {
+  setRendererSize();
+});
 
 // シーン
 const scene = new THREE.Scene();
@@ -16,7 +35,6 @@ const scene = new THREE.Scene();
 // カメラ
 const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 10000);
 camera.position.set(0, 10, 30); // X:0, Y:200, Z:400
-camera.lookAt(300, 100, 0);
 
 // ライト
 const dirLight = new THREE.DirectionalLight(0xffffff, 2);
@@ -46,7 +64,15 @@ scene.add(axesHelper);
 // controls
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.enablePan = false; // 平行移動は不可
-controls.enableZoom = false; // ズームはOK
+controls.enableZoom = true; // ズーム有効
+
+// パン移動の最大・最小制限（カメラ座標で）
+controls.minDistance = 20;  // ズームの最小距離
+controls.maxDistance = 200;  // ズームの最大距離
+
+// パン範囲を制限
+controls.maxPolarAngle = Math.PI/2;   // 上向き
+controls.minPolarAngle = Math.PI/6;   // 下向き
 
 // 上下の可動域（ラジアン）
 // 0に近いほど下向き、πに近いほど上向き
@@ -178,13 +204,3 @@ scene.add(spriteCentence)
 scene.add(spriteHospital)
 
 
-
-window.addEventListener('resize', () => {
-  const width = window.innerWidth
-  const height = window.innerHeight
-
-  camera.aspect = width / height
-  camera.updateProjectionMatrix()
-
-  renderer.setSize(width, height)
-})
