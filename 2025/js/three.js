@@ -23,25 +23,26 @@ scene.add(new THREE.AmbientLight(0xffffff, 1.5)); // 全体を明るく
 // キャンバス比率を定義
 const canvasRatio = { width: 2.5, height: 2 };
 
-// 初期サイズ設定
+// 初期サイズ設定＆リサイズ関数を統合
 function setRendererSize() {
-  const canvasWidth = window.innerWidth / canvasRatio.width;
-  const canvasHeight = window.innerHeight / canvasRatio.height;
+  // canvas 幅は画面幅に合わせ、最大 800px
+  const width = Math.min(window.innerWidth, 800);
+  const height = window.innerHeight;
 
-  camera.aspect = canvasWidth / canvasHeight;
-  camera.updateProjectionMatrix();
-
-  renderer.setSize(canvasWidth, canvasHeight);
+  renderer.setSize(width, height);
   renderer.setPixelRatio(window.devicePixelRatio);
+
+  // カメラのアスペクト比を更新
+  camera.aspect = width / height;
+  camera.updateProjectionMatrix();
 }
 
 // 最初のサイズ設定
 setRendererSize();
 
-// リサイズイベント
-window.addEventListener('resize', () => {
-  setRendererSize();
-});
+// ウィンドウリサイズ時
+window.addEventListener('resize', setRendererSize);
+
 
 
 // GLB ロード

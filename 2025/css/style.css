@@ -324,6 +324,14 @@
         #MAP a:hover {
             background-color: rgb(248, 239, 226) ;
         }
+          #map {
+            display: block;
+            width: 100%;
+            max-width: 800px; /* 最大幅を800pxに制限 */
+            height: 100vh;
+            margin: 0 auto; /* 中央に配置 */
+        }
+        
         #PV p video{
             width: 640px ;
             height: 360px;
@@ -592,11 +600,6 @@
             .footer-links a {
             display: block;       /* ブロック要素にして縦並びに */
             margin: 10px 0;       /* 上下に余白を追加 */
-        }
-        #map {
-            display: block;
-            width: 100vw;  /* 幅いっぱい */
-            height: 100vh; /* 高さいっぱい */
         }
         table {
             width: 95%; /* 横幅いっぱいに */
