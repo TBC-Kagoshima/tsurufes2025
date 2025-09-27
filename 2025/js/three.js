@@ -3,7 +3,7 @@ import { GLTFLoader } from "https://unpkg.com/three@0.175.0/examples/jsm/loaders
 import { OrbitControls } from "https://unpkg.com/three@0.175.0/examples/jsm/controls/OrbitControls.js";
 
 const canvas = document.querySelector("#map");
-const container = document.querySelector(".innerwrap")
+const container = document.querySelector(".innerWrap")
 const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
 renderer.setClearColor(0xFFFFFF); 
 
