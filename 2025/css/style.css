@@ -304,6 +304,7 @@
         #MAP{
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
         }
         #MAP a {
             text-align: center;
@@ -591,6 +592,11 @@
             .footer-links a {
             display: block;       /* ブロック要素にして縦並びに */
             margin: 10px 0;       /* 上下に余白を追加 */
+        }
+        #map {
+            display: block;
+            width: 100vw;  /* 幅いっぱい */
+            height: 100vh; /* 高さいっぱい */
         }
         table {
             width: 95%; /* 横幅いっぱいに */
