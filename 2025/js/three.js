@@ -23,13 +23,18 @@ scene.add(new THREE.AmbientLight(0xffffff, 1.5)); // 全体を明るく
 // キャンバス比率を定義
 const canvasRatio = { width: 2.5, height: 2 };
 
-// 初期サイズ設定＆リサイズ関数を統合
 function setRendererSize() {
   // canvas 幅は画面幅に合わせ、最大 800px
   const width = Math.min(window.innerWidth, 800);
-  const height = window.innerHeight;
+  // 高さは画面高さに合わせつつ、最大 600px に制限
+  const height = Math.min(window.innerHeight, 600);
 
-  renderer.setSize(width, height);
+  // CSS で canvas のサイズも設定
+  renderer.domElement.style.width = width + 'px';
+  renderer.domElement.style.height = height + 'px';
+
+  // レンダラーの内部サイズを設定（falseでCSSと同じサイズに）
+  renderer.setSize(width, height, false);
   renderer.setPixelRatio(window.devicePixelRatio);
 
   // カメラのアスペクト比を更新
@@ -42,6 +47,7 @@ setRendererSize();
 
 // ウィンドウリサイズ時
 window.addEventListener('resize', setRendererSize);
+
 
 
 
