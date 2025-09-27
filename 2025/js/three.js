@@ -56,6 +56,14 @@ controls.maxPolarAngle = Math.PI/2;   // 上限（ほぼ真上）
 controls.target.set(80, -50, 0); // 注視するポイントを設定
 controls.update();               // 反映
 
+function animate() {
+  requestAnimationFrame(animate);
+  controls.update();  // OrbitControls を使う場合必須
+  renderer.render(scene, camera);
+}
+animate();
+
+
 // 画像のテクスチャを読み込み
 const textureLoader = new THREE.TextureLoader()
 // ベースのパスを定義
