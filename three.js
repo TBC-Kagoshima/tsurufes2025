@@ -137,7 +137,6 @@ function createSprite(texture, position) {
 // 複数作成してシーンに追加
 const sprite1  = createSprite(tex1,  new THREE.Vector3(0, 0, -5))
 const sprite2  = createSprite(tex2,  new THREE.Vector3(3, 1, -5))
-const sprite3  = createSprite(tex3,  new THREE.Vector3(6, 2, -5))
 const sprite4  = createSprite(tex4,  new THREE.Vector3(9, 3, -5))
 const sprite5  = createSprite(tex5,  new THREE.Vector3(12, 4, -5))
 const sprite6  = createSprite(tex6,  new THREE.Vector3(15, 5, -5))
@@ -171,7 +170,6 @@ const sprite32 = createSprite(tex32, new THREE.Vector3(93, 31, -5))
 
 scene.add(sprite1)
 scene.add(sprite2)
-scene.add(sprite3)
 scene.add(sprite4)
 scene.add(sprite5)
 scene.add(sprite6)
